@@ -3,41 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agriculture Problems - CT-UG Hackathon</title>
+    <title>Agriculture Problems | CT-UG Department Hackathon</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <i class="fas fa-code"></i>
-                    <span>CT-UG Hackathon</span>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html#categories" class="nav-link">Categories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html#register" class="nav-link">Register</a>
-                    </li>
-                </ul>
-                <div class="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="kec - logo.png" alt="KEC Logo" class="logo">
+                <span class="logo-text">KEC</span>
             </div>
-        </nav>
-    </header>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#problems" class="nav-link">Categories</a></li>
+                <li><a href="index.html#register" class="nav-link">Register</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
     <!-- Category Header -->
     <section class="category-header">
@@ -158,10 +149,13 @@
                 </div>
             </div>
 
-            <div class="back-button">
-                <a href="index.html" class="btn btn-secondary">
-                    <i class="fas fa-arrow-left"></i>
-                    Back to Categories
+            <!-- Register Call-to-Action -->
+            <div class="register-cta">
+                <h2>Ready to Take on the Challenge?</h2>
+                <p>Select your problem statement and register your team to participate in the hackathon!</p>
+                <a href="index.html#register" class="btn btn-primary btn-large">
+                    <i class="fas fa-user-plus"></i>
+                    Register Your Team
                 </a>
             </div>
         </div>
@@ -172,17 +166,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>CT-UG Hackathon</h3>
-                    <p>Innovation meets technology at Kongu Engineering College</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="index.html#categories">Categories</a></li>
-                        <li><a href="index.html#register">Register</a></li>
-                    </ul>
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> ctugcodingclub2025.official@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 xxxxxxxxxxx</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Kongu Engineering College, Perundurai</p>
                 </div>
                 <div class="footer-section">
                     <h3>Follow Us</h3>
@@ -190,6 +177,15 @@
                         
                         <a href="https://www.instagram.com/kec_codingclub_ctug/profilecard/?igsh=MXFxcjdnaHJjcjF0aA==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#problems">Categories</a></li>
+                        <li><a href="index.html#register">Register</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -199,5 +195,19 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function selectProblem(problemId, problemName) {
+            // Store selected problem in localStorage
+            localStorage.setItem('selectedProblemId', problemId);
+            localStorage.setItem('selectedProblemName', problemName);
+            localStorage.setItem('selectedCategory', 'agriculture');
+            
+            // Show success message
+            alert(`Problem "${problemName}" selected! You can now proceed to registration.`);
+            
+            // Redirect to registration
+            window.location.href = 'index.html#register';
+        }
+    </script>
 </body>
 </html>
