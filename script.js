@@ -548,8 +548,8 @@ function setRegistrationLink(url) {
 // Initialize registration link (you can change this URL)
 document.addEventListener('DOMContentLoaded', function() {
     // Set the registration link here - replace with your actual registration form URL
-    // setRegistrationLink('https://your-registration-form-url.com');
-    
+    setRegistrationLink('https://sujeeth-p.github.io/Hackathon_form/');
+});
     // For now, it shows an alert. Remove this and uncomment the line above when you have the URL
     const registrationLink = document.getElementById('registrationLink');
     if (registrationLink) {
